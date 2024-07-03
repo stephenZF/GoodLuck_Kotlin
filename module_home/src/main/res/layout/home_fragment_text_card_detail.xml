@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="textCard"
+                type="com.goodluck.entity.TextCard"/>
+    </data>
+
+    <com.qmuiteam.qmui.widget.QMUIWindowInsetLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.activity.TextCardDetailActivity">
+
+        <ViewStub
+                android:layout="@layout/home_detail_text_view"
+                android:id="@+id/view_text"
+                app:textCard="@{textCard}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        <ViewStub
+                android:layout="@layout/home_detail_topic_view"
+                android:id="@+id/view_topic"
+                app:textCard="@{textCard}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        <ViewStub
+                android:layout="@layout/home_detail_music_view"
+                android:id="@+id/view_music"
+                app:textCard="@{textCard}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+    </com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>
+</layout>

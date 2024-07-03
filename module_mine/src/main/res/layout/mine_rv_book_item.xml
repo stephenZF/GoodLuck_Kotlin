@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            app:qmui_skin_background="?attr/app_skin_book_background"
+            android:layout_height="wrap_content">
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundFrameLayout
+                android:orientation="vertical"
+                app:qmui_radius="@dimen/dp_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="match_parent"
+                app:layout_constraintDimensionRatio="h,1:1"
+                android:layout_height="0dp">
+
+            <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                    android:id="@+id/iv_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:qmui_corner_radius="@dimen/dp_2"
+                    app:qmui_border_color="@color/transparent"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:visibility="invisible"
+                    tools:visibility="visible"
+                    android:id="@+id/v_shadow"
+                    android:background="@color/color_C31D1D1D"
+                    android:layout_height="match_parent"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="默认文集"
+                    android:textSize="@dimen/text_size_18"
+                    android:id="@+id/tv_book_name"
+                    app:qmui_skin_text_color="?attr/app_skin_common_title_text_color"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    app:typeface="@{1}"
+                    android:text="0字句"
+                    app:qmui_skin_text_color="?attr/app_skin_common_title_text_color"
+                    android:id="@+id/tv_book_size"
+                    android:layout_gravity="bottom"
+                    android:paddingStart="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:textSize="@dimen/text_size_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <CheckBox
+                    android:layout_gravity="bottom|end"
+                    android:id="@+id/cb_check"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:enabled="false"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundFrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
